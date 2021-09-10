@@ -1,0 +1,34 @@
+|include "report.plp"
+
+|define cls clear()
+_ cls
+ print("Loading")
+ loading(8,0,100000)
+ cls
+
+ print("Sign up" nline)
+
+ text userup = get_text("Username: ")
+ text passup = get_text("Password: ")
+
+ print("Username is " Str$ userup)
+ print(nline "Password is " Str$ passup)
+ cls
+ loader(bgred,"Please Wait..",30,5000)
+ cls
+
+ when true then
+    print("Sign in" nline)
+    text userin = get_text("Username: ")
+    text passin = get_text("Password: ")
+    cond indexof(userup,userin,0) and indexof(passup,passin,0) then
+        print(bold green "Successful" set nline)
+        beep()
+        return 0
+    ends other{
+        print(red "failure" set)
+        sleep(1)
+        cls
+    }
+ ends
+Done
