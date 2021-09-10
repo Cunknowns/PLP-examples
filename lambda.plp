@@ -1,0 +1,7 @@
+_  lambda(in fac(in x),{
+    cond x == 1 then
+        return 1
+    ends other return x * fac(x - 1)
+ })
+ print(Num$ fac(5))
+Done
