@@ -1,0 +1,10 @@
+function (in factor,in x)
+    cond x was 1 then
+        return 1
+    ends other{
+        return x * factor(x - 1)
+    }
+ends
+
+_ print(Num$ factor(5))
+Done
