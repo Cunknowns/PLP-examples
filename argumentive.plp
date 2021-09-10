@@ -1,0 +1,39 @@
+_ in i = 1
+	loop (i < argc, ++i)
+	cond strstr(argv[i],"echo") then
+
+		in d = 2;
+		loop (d < argc,++d)
+			print(Str$ argv[d])
+		ends
+		return 0
+
+	ends
+
+	cond indexof(argv[i],"gets",0) then
+
+		text i = get_text("Please enter text:")
+		print(Str$ i)
+		return 0
+	ends
+
+	cond indexof(argv[i],"help",0) then
+		print("Help:" nline)
+		print("- echo [argv[i]]------------>print text" nline)
+		print("- help---------------------->help for argumentive.plp" nline)
+		print("- gets---------------------->wait for user after enter" nline)
+		return 0
+	ends
+
+ ends
+ cond argc >= 0 and argc <= 1 then
+	print(cyan bold "Argumentive is cli argument" set nline "Please select option argument" nline)
+	return 1
+ ends
+ cond argc > 1 then
+	print(yellow "this not work argument options" set nline "you can arg [help]" nline)
+	return 1
+ ends
+
+Done
+
