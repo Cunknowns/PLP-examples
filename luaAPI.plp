@@ -1,0 +1,6 @@
+function (in luaLang)
+    printl("'Hello World in API lua language'")
+ ends
+
+_ luaLang()
+Done
