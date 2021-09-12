@@ -1,5 +1,8 @@
-_ in i = 1
+_ 
+- arguments looping in PLP
+	in i = 1
 	loop (i < argc, ++i)
+-	echo argument ./a.out echo
 	cond strstr(argv[i],"echo") then
 
 		in d = 2;
@@ -10,6 +13,7 @@ _ in i = 1
 
 	ends
 
+-	gets stdin in argument
 	cond indexof(argv[i],"gets",0) then
 
 		text i = get_text("Please enter text:")
@@ -18,6 +22,7 @@ _ in i = 1
 		
 	ends
 
+-	arguments helping
 	cond indexof(argv[i],"help",0) then
 	
 		print("Help:" nline)
@@ -35,6 +40,7 @@ _ in i = 1
 	return 1
 	
  ends
+- If the arguments were not entered correctly by the user
  cond argc > 1 then
  
 	print(yellow "this not work argument options" set nline "you can arg [help]" nline)
