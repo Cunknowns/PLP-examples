@@ -1,11 +1,9 @@
 - definition for range
-|define first 1 ... 5
-|define second 5 ... 10
 
 - main ranging.plp
 _ print( "from 1 to 10 range 1 to 5:") 
- range(" ",1,10,first)
+ range(" ",1,10,1 ... 5)
  print ("\nfrom 1 to 10 range 5 to 10:")
- range(" ",1,10,second)
+ range(" ",1,10,5 ... 10)
  print(nline)
 Done
