@@ -2,10 +2,8 @@
 function (in factor,in x)
     cond x was 1 then
         return 1
-    ends other{
-        return x * factor(x - 1)
-    }
-ends
+    ends other return x * factor(x - 1)
+ ends
 
 - 5! = 1*2*3*4*5
 _ print(Num$ factor(5))
