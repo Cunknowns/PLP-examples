@@ -1,8 +1,13 @@
+- Create a color orange Image
+
 _ in row, column
- in width = 100
- in height = 100
+
+- Image size 100 x 100
+ in width = 100 , height = 100
+
  in size = width * height * 4
 
+- Buffer size 
  $ header[54] = { 0 }
  strcpy(header, "BM")
  memset(&header[2], (in)(54 + size), 1)
@@ -14,6 +19,7 @@ _ in row, column
  memset(&header[28], (short)32, 1)
  memset(&header[34], (in)size, 1)
 
+- Free up memory and free up extra space
  U$ * pixels = malloc(size)
  row = height - 1
  loop (row >= 0, row--)
@@ -25,6 +31,7 @@ _ in row, column
    pixels[p + 2] = 255
   ends
  ends
+
  file(fout,"img.bmp","wb")
  fwrite(header, 1, 54, fout)
  fwrite(pixels, 1, size, fout)
