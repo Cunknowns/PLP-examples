@@ -8,7 +8,9 @@ _
 		in d = 2;
 		loop (d < argc,++d)
 			print(Str$ argv[d])
+			print(" ")
 		ends
+		print(nline)
 		return 0
 
 	ends
