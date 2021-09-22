@@ -1,6 +1,8 @@
 |include "report.plp"
 
+- getting signup for username and password && signin for username and password
 |define cls clear()
+
 _ cls
  print("Loading")
  loading(8,0,100000)
@@ -14,7 +16,7 @@ _ cls
  print("Username is " Str$ userup)
  print(nline "Password is " Str$ passup)
  cls
- loader(bgred,"Please Wait..",30,5000)
+ loader(bgcyan,"Please Wait..",30,5000)
  cls
 
  when true then
@@ -26,7 +28,7 @@ _ cls
         beep()
         return 0
     ends other{
-        print(red "failure" set)
+        print(bold red "failure" set)
         sleep(1)
         cls
     }
