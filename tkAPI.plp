@@ -1,5 +1,5 @@
-- Graphic Programming -> TCL / TK Programming Language ^ tklib.plp library
 |include "tklib.plp"
+- Graphic Programming -> TCL / TK Programming Language ^ tklib.plp library
 
 _ title("Hello World")
 
