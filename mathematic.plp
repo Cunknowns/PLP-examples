@@ -9,10 +9,13 @@ _ in mat[3][2] = { 1,2,3,4,5,6 }
  collatz(100)
  
  print ("\nmatrix table: \n")
- matrix(3,2,mat[0])
+ matrix (3, 2, mat[0])
  
  print ("\nn = 10\n")
  print ("∑ i = " Num$ i)
  print ("\ni = 0")
  print (nline)
+
+ print ("First 5 Fermat numbers:" nline)
+ fermat(5)
 Done
