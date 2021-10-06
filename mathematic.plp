@@ -14,8 +14,10 @@ _ in mat[3][2] = { 1,2,3,4,5,6 }
  print ("\nn = 10\n")
  print ("∑ i = " Num$ i)
  print ("\ni = 0")
- print (nline)
+ print (nline nline)
 
- print ("First 5 Fermat numbers:" nline)
- fermat(5)
+ in d = 0
+ loop(d <= 5,d++)
+	print("fermat(%d) = %.lf\n", d, fermat(d));
+ ends
 Done
