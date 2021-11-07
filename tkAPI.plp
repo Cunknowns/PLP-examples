@@ -1,10 +1,10 @@
 |include "tklib.plp"
 - Graphic Programming -> TCL / TK Programming Language ^ tklib.plp library
 
-_ title("Hello World")
+_ title ("Hello World")
 
- proc("Hello {}","puts Hello")
- button(".b","Hello",10,10,"Say a Hello")
+ proc ("Hello {}", "puts Hello")
+ button (".b", "Hello", 10, 10, "Say a Hello")
  
- run()
+ run ()
 Done
