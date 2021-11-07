@@ -1,12 +1,12 @@
 _ in mat[3][2] = { 1,2,3,4,5,6 }
- in i = sigma(0,10,1)
+ in i = sigma (0,10,1)
  
  print ("5! = " Num$ factorial(5))
  
  print ("\n\ncatalan conjecture: \npow(3,2) - pow(2,3) = " Num$ catalan(3,2,2,3))
  
  print ("\n\ncollatz conjecture: \n")
- collatz(100)
+ collatz (100)
  
  print ("\nmatrix table: \n")
  matrix (3, 2, mat[0])
@@ -17,7 +17,7 @@ _ in mat[3][2] = { 1,2,3,4,5,6 }
  print (nline nline)
 
  in d = 0
- loop(d <= 5,d++)
+ loop (d <= 5, d++)
 	print("fermat(%d) = %.lf\n", d, fermat(d));
  ends
 Done
