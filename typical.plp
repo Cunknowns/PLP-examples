@@ -1,8 +1,8 @@
 - This is Typical in PLP programming language
 - Information file for TYPICAL.PLP
-_ print("codeline: "  Num$ __LINE__)
- print(nline "date: " Str$ __DATE__)
- print(nline "time: " Str$ __TIME__)
- print(nline "function: " Str$ __FUNCTION__)
- print(nline)
+_ print ("codeline: "  Num$ __LINE__)
+ print (nline "date: " Str$ __DATE__)
+ print (nline "time: " Str$ __TIME__)
+ print (nline "function: " Str$ __FUNCTION__)
+ print (nline)
 Done
