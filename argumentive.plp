@@ -2,50 +2,53 @@ _
 - arguments looping in PLP
 	in i = 1
 	loop (i < argc, ++i)
--	echo argument ./a.out echo
-	cond strstr(argv[i],"echo") then
+	
+- 	echo argument ./a.out echo
+	cond strstr (argv[i], "echo") then
 
 		in d = 2;
-		loop (d < argc,++d)
-			print(Str$ argv[d])
-			print(" ")
+		loop (d < argc, ++d)
+			print (Str$ argv[d])
+			print (" ")
 		ends
-		print(nline)
+		print (nline)
 		return 0
 
 	ends
 
 -	gets stdin in argument
-	cond indexof(argv[i],"gets",0) then
+	cond indexof (argv[i], "gets", 0) then
 
-		text i = get_text("Please enter text:")
-		print(Str$ i)
+		text i = get_text ("Please enter text:")
+		print (Str$ i)
 		return 0
 		
 	ends
 
 -	arguments helping
-	cond indexof(argv[i],"help",0) then
+	cond indexof (argv[i], "help", 0) then
 	
-		print("Help:" nline)
-		print("- echo [argv[i]]------------>print text" nline)
-		print("- help---------------------->help for argumentive.plp" nline)
-		print("- gets---------------------->wait for user after enter" nline)
+		print ("Help:" nline)
+		print ("- echo [argv[i]]------------>print text" nline)
+		print ("- help---------------------->help for argumentive.plp" nline)
+		print ("- gets---------------------->wait for user after enter" nline)
 		return 0
 		
 	ends
 
  ends
+ 
  cond argc >= 0 and argc <= 1 then
  
-	print(cyan bold "Argumentive is cli argument" set nline "Please select option argument" nline)
+	print (cyan bold "Argumentive is cli argument" set nline "Please select option argument" nline)
 	return 1
 	
  ends
+ 
 - If the arguments were not entered correctly by the user
  cond argc > 1 then
  
-	print(yellow "this not work argument options" set nline "you can arg [help]" nline)
+	print (yellow "this not work argument options" set nline "you can arg [help]" nline)
 	return 1
 	
  ends
