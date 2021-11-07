@@ -1,35 +1,35 @@
 |include "report.plp"
 
 - getting signup for username and password && signin for username and password
-|define cls clear()
+|define cls clear ()
 
 _ cls
- print("Loading")
- loading(8,0,100000)
+ print ("Loading")
+ loading (8, 0, 100000)
  cls
 
- print("Sign up" nline)
+ print ("Sign up" nline)
 
- text userup = get_text("Username: ")
- text passup = get_text("Password: ")
+ text userup = get_text ("Username: ")
+ text passup = get_text ("Password: ")
 
- print("Username is " Str$ userup)
- print(nline "Password is " Str$ passup)
+ print ("Username is " Str$ userup)
+ print (nline "Password is " Str$ passup)
  cls
- loader(bgcyan,"Please Wait..",30,5000)
+ loader (bgcyan,"Please Wait..",30,5000)
  cls
 
  when true then
-    print("Sign in" nline)
-    text userin = get_text("Username: ")
-    text passin = get_text("Password: ")
-    cond indexof(userup,userin,0) and indexof(passup,passin,0) then
-        print(bold green "Successful" set nline)
-        beep()
+    print ("Sign in" nline)
+    text userin = get_text ("Username: ")
+    text passin = get_text ("Password: ")
+    cond indexof (userup, userin, 0) and indexof (passup, passin, 0) then
+        print (bold green "Successful" set nline)
+        beep ()
         return 0
     ends other{
-        print(bold red "failure" set)
-        sleep(1)
+        print (bold red "failure" set)
+        sleep (1)
         cls
     }
  ends
