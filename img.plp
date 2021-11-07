@@ -9,22 +9,22 @@ _ in row, column
 
 - Buffer size 
  $ header[54] = { 0 }
- strcpy(header, "BM")
- memset(&header[2], (in)(54 + size), 1)
- memset(&header[10], (in)54, 1)
- memset(&header[14], (in)40, 1)
- memset(&header[18], (in)width, 1)
- memset(&header[22], (in)height, 1)
- memset(&header[26], (short)1, 1)
- memset(&header[28], (short)32, 1)
- memset(&header[34], (in)size, 1)
+ strcpy (header, "BM")
+ memset (&header[2], (in)(54 + size), 1)
+ memset (&header[10], (in)54, 1)
+ memset (&header[14], (in)40, 1)
+ memset (&header[18], (in)width, 1)
+ memset (&header[22], (in)height, 1)
+ memset (&header[26], (short)1, 1)
+ memset (&header[28], (short)32, 1)
+ memset (&header[34], (in)size, 1)
 
 - Free up memory and free up extra space
- U$ * pixels = malloc(size)
+ U$ * pixels = malloc (size)
  row = height - 1
  loop (row >= 0, row--)
   column = 0
-  loop(column < width, column++)
+  loop (column < width, column++)
    in p = (row * width + column) * 4
    pixels[p + 0] = 64
    pixels[p + 1] = 128
@@ -32,9 +32,9 @@ _ in row, column
   ends
  ends
 
- file(fout,"img.bmp","wb")
- fwrite(header, 1, 54, fout)
- fwrite(pixels, 1, size, fout)
- free(pixels)
- fclose(fout)
+ file (fout,"img.bmp","wb")
+ fwrite (header, 1, 54, fout)
+ fwrite (pixels, 1, size, fout)
+ free (pixels)
+ fclose (fout)
 Done
