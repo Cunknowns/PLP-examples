@@ -6,7 +6,7 @@ _
 - 	echo argument ./a.out echo
 	cond strstr (argv[i], "echo") then
 
-		in d = 2;
+		in d = 2
 		loop (d < argc, ++d)
 			print (Str$ argv[d])
 			print (" ")
