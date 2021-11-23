@@ -28,8 +28,14 @@ _ cls
         beep ()
         return 0
     ends other{
-        print (bold red "failure" set)
-        sleep (1)
+        $ i[8] = {'f','a','i','l','u','r','e'}
+	in d = 0
+	loop (d <= 8 ,d++)
+		print(bold red Chr$ i[d])
+		print(set)
+        	usleep (50000)
+	ends
+	sleep(1)
         cls
     }
  ends
