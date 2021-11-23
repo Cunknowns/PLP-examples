@@ -31,11 +31,11 @@ _ cls
         $ i[8] = {'f','a','i','l','u','r','e'}
 	in d = 0
 	loop (d <= 8 ,d++)
-		print(bold red Chr$ i[d])
-		print(set)
+		print (bold red Chr$ i[d])
+		print (set)
         	usleep (50000)
 	ends
-	sleep(1)
+	sleep (1)
         cls
     }
  ends
