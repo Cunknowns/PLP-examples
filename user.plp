@@ -30,7 +30,7 @@ _ cls
     ends other{
         $ i[8] = {'f','a','i','l','u','r','e'}
 	in d = 0
-	loop (d <= 8 ,d++)
+	loop (d <= 7 ,d++)
 		print (bold red Chr$ i[d])
 		print (set)
         	usleep (50000)
