@@ -1,0 +1,12 @@
+-- Calculator PLP with lua command
+
+a = read()
+b = read()
+print ("Plus: " .. a + b)
+print ("Division: " .. a / b)
+print ("Negative: " .. a - b)
+print ("Multiplication: " .. a * b)
+print ("Pi: " .. pi(a,b,1))
+print ("Sigma: " .. sigma(a,b,1))
+print ("Catalan Numbers A[" .. catalan(a) .. "] and B[" .. catalan(b) .. "]")
+print ("Factorial A[" .. factorial(a) .. "] and B" .. factorial(b) .. "]")
