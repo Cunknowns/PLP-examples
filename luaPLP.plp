@@ -1,7 +1,9 @@
 -- Calculator PLP with lua command
 -- PLP -l luaPLP.plp
 
+write("\nNumber1:")
 a = read()
+write("Number2:")
 b = read()
 print ("Plus: " .. a + b)
 print ("Division: " .. a / b)
