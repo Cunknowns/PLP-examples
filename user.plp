@@ -1,6 +1,5 @@
 |include "report.plp"
 
-- getting signup for username and password && signin for username and password
 |define cls clear ()
 
 _ cls
@@ -25,6 +24,12 @@ _ cls
     text passin = get_text ("Password: ")
     cond indexof (userup, userin, 0) and indexof (passup, passin, 0) then
         print (bold green "Successful" set nline)
+	file (fp,".user.log","a+")
+	fputs ("\n\nWOW very nice one user signing up \n username: ", fp)
+	fputs (userup, fp)
+	fputs ("\npassword: ", fp)
+	fputs (passup, fp)
+	fclose (fp)
         beep ()
         return 0
     ends other{
