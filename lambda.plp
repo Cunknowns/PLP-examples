@@ -1,9 +1,9 @@
 - This code is supported for computers that use the gcc compiler
 _  
 - lambda -> anonymous function 
-lambda(in fac(in x),{
+lambda(function (in fac,in x),
     in i = factorial(x)
-    print(Num$ i)
- })
+    print (Num$ i)
+  ends)
  fac(5)
 Done
