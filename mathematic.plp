@@ -1,3 +1,4 @@
+|define endline print (nline)
 _ in mat[3][2] = { 1,2,3,4,5,6 }
  in i = sigma (0,10,1)
  
@@ -20,4 +21,13 @@ _ in mat[3][2] = { 1,2,3,4,5,6 }
  loop (d <= 5, d++)
 	print("Fermat(%d) = %.lf\n", d, fermat(d));
  ends
+ 
+ in id = 0
+ print ("Modular arithmetic:")
+ loop (id <= 10,id++)
+	cond mod(id,2) was 0 then
+		print(" " Num$ id)
+	ends
+ ends
+ endline
 Done
