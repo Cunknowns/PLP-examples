@@ -1,0 +1,10 @@
+class hello
+[
+	public:
+		in a
+]
+
+_ hello hi
+ hi.a = 10
+ print hi.a
+Done
