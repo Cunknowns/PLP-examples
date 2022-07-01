@@ -1,10 +1,21 @@
-class hello
+- OOP -> PLP programming language
+- file -> oop.plp
+- output -> BMW x5 1999
+class car
 [
 	public:
-		in a
+		text brand
+		text model
+		in year
+		
+(car, text b, text m, in y)
+	brand = b
+	model = m
+	year = y
+)
 ]
 
-_ hello hi
- hi.a = 10
- print hi.a
+_ car obj1("BMW","x5", 1999)
+ car obj2("MVM", "512", 2010)
+ print obj1.brand << " " << obj1.model << " " << obj1.year
 Done
