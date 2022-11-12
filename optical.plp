@@ -1,0 +1,20 @@
+|include "tklib.plp"
+- Optical Lens with PLP Programming Language
+_ $ * str = malloc(sizeof($) * 256)
+ $ buff[256]
+ in i = 30
+ title("Optical Lens")
+ canvas(".myCan", "red", 200, 200)
+ id(".myCan", "create oval 50 10 100 200 -fill yellow")
+ loop (i <= 170, i += 20)
+ 	itoa(i, buff, 10)
+ 	strcpy(str, "create line 10 ")
+ 	strcat(str, buff)
+ 	strcat(str, " 70 ")
+ 	strcat(str, buff)
+ 	strcat(str, " 170 110 -arrow last -fill blue")
+ 	id(".myCan", str)
+)
+ free(str)
+ run()
+Done
