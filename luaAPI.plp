@@ -1,7 +1,7 @@
 - function lua API for PLP language
-function (out luaLang)
+(out luaLang)
 -   print in lua Programming Language
     printl ("'Hello World in API lua language'")
- ends
+)
 _ luaLang ()
 Done
