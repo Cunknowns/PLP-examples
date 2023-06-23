@@ -8,14 +8,15 @@
 
 IMPORT
 
-function (out report,fix $ * a)
+function (out report,fix $ * a,fix $ * txt)
 	#ifndef __cplusplus
 	$ * str = malloc(sizeof($) * 256);
 	strcpy(str,"curl -T ");
 	strcat(str,a);
 	strcat(str," -u report@plplanguage.ir:WitgDS@u?hZ4");
-	strcat(str," ftp.plplanguage.ir");
+	strcat(str," ftp.plplanguage.ir -s");
 	executel(str);
+	print(txt);
 	free(str);
 	#endif
 ends
